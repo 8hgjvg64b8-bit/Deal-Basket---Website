@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found — Deal Basket</title>
+<meta name="description" content="That page isn't here. Head back to Deal Basket.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1C5B3A">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Courier+Prime:wght@400;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="/">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M4 11h24l-2.6 15.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L4 11Z" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M11 11 15 3M21 11l-4-8" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M11.5 17.5 14.5 21l6.5-7" fill="none" stroke="#FFC53D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Deal Basket
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/contact.html">Support</a>
+      <a class="btn btn-primary" href="/#early">Get early access</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap notfound">
+  <p class="code">ERROR 404 &middot; ITEM NOT FOUND</p>
+  <h1>This one's out of stock.</h1>
+  <p class="lede" style="margin-inline:auto">The page you asked for isn't on the shelf. It may have moved, or the link may have a typo in it.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="/">Back to the homepage</a>
+    <a class="btn btn-ghost" href="/contact.html">Get support</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-bottom" style="border-top:0;padding-top:0">
+      <p>&copy; <span id="year">2026</span> Deal Basket. All rights reserved.</p>
+      <p class="disclaimer"><a href="/privacy.html">Privacy</a> &middot; <a href="/terms.html">Terms</a> &middot; <a href="/contact.html">Support</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var toggle = document.getElementById("navToggle");
+  var nav = document.getElementById("nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.textContent = open ? "Close" : "Menu";
+    });
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
