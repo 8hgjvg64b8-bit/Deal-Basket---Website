@@ -77,7 +77,11 @@
     <ul>
       <li><strong>Account information.</strong> Your email address and, if you choose to add one, a display name. If you sign in with Apple or Google, we receive the basic profile information those services provide, which may be a private relay email address.</li>
       <li><strong>Shopping lists and preferences.</strong> The items you add to a basket, saved lists, starred products, and the stores or brands you tell us you prefer.</li>
-      <li><strong>Location you enter.</strong> A ZIP code or address you type in so we can find stores near you.</li>
+      <li><strong>Addresses.</strong> A ZIP code or address you type in so we can find stores near you, and any delivery address you save for an order.</li>
+      <li><strong>Order information.</strong> If you place an order through the app, we keep what you ordered, which store filled it, the delivery or pickup time, substitutions you accepted or declined, the amount charged, and any dispute or rating you submit.</li>
+      <li><strong>Payment method details.</strong> Handled by Stripe. We store only a token, the card brand, and the last four digits so you can recognize a saved card.</li>
+      <li><strong>Receipts you upload.</strong> Photographs of store receipts you choose to scan, and the itemized data read from them. Receipts can reveal a lot about a household, so we use them only to build your lists and price history, and we never sell them.</li>
+      <li><strong>Loyalty program details.</strong> If you connect a store loyalty program, the membership or card number needed to apply your discounts.</li>
       <li><strong>Messages you send us.</strong> The contents of support emails or feedback you submit.</li>
     </ul>
 
@@ -96,7 +100,8 @@
     <p>We use the information described above to:</p>
     <ul>
       <li>Price your list at stores near you and show you comparisons;</li>
-      <li>Save your lists, preferences, and savings history across your devices;</li>
+      <li>Save your lists, preferences, order history, and savings history across your devices;</li>
+      <li>Place, fulfil, and support orders you make through the app, including sharing what is needed with the store or delivery partner filling it;</li>
       <li>Send price alerts and other notifications you have asked for;</li>
       <li>Diagnose crashes, prevent abuse, and keep the Service secure;</li>
       <li>Understand which features are used so we can improve the app;</li>
@@ -118,12 +123,14 @@
     <h2 id="services">5. Third-party services</h2>
     <p>The Service relies on the following third parties, each of which handles data under its own privacy policy:</p>
     <ul>
-      <li>Supabase — account storage, authentication, and app data.</li>
-      <li>Sentry — crash and error reporting.</li>
-      <li>PostHog — product analytics.</li>
-      <li>Stripe — subscription payments. Stripe receives your payment details directly; we never see or store your full card number.</li>
+      <li><span class="placeholder">[HOSTING PROVIDER]</span> — hosting for our database and application servers.</li>
+      <li>Stripe — payments and subscriptions. Stripe receives your payment details directly; we never see or store your full card number.</li>
+      <li>Amazon Web Services (SES) — transactional email such as verification codes and password resets.</li>
+      <li>Google Maps Platform — converting addresses into map coordinates so we can find stores and delivery areas near you.</li>
+      <li>Anthropic — automated reading of receipt images you choose to upload, so we can turn them into itemized lists. Receipts are sent for processing only when you upload one.</li>
+      <li>Expo — delivery of push notifications.</li>
       <li>Microsoft 365 — support and business email.</li>
-      <li>Apple and Google — app distribution, sign-in, and push notification delivery.</li>
+      <li>Apple and Google — app distribution and push notification delivery.</li>
     </ul>
     <p>Store prices shown in the app come from publicly available pricing sources and licensed data providers. Viewing a store's prices in Deal Basket does not share your identity with that store.</p>
 
