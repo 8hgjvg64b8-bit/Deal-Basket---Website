@@ -85,12 +85,12 @@
     <ul>
       <li><strong>Device and app information.</strong> Device model, operating system version, app version, language, and time zone.</li>
       <li><strong>Usage information.</strong> Which screens you open, which features you use, and error or crash reports. We use this to fix problems and decide what to build next.</li>
-      <li><strong>Approximate location, only if you allow it.</strong> If you grant location permission, we use your device location to find nearby stores. You can decline this and enter a ZIP code instead, and you can turn the permission off at any time in your device settings.</li>
+      <li><strong>Precise location, only if you allow it.</strong> If you grant location permission, we use your device's precise location to find stores near you and to sort them by distance. You can decline this and enter a ZIP code instead, and you can turn the permission off at any time in your device settings. The app works without it.</li>
       <li><strong>Cookies on the website.</strong> The dealbasket.app site uses only the cookies needed for the site to function. We do not use advertising cookies.</li>
     </ul>
 
     <h3>What we do not collect</h3>
-    <p>We do not collect payment card numbers or bank details. We do not ask for your Social Security number, your government ID, or the login credentials for your store loyalty accounts. We do not access your contacts, photos, microphone, or health data.</p>
+    <p>We never see or store your full card number. Subscription payments are processed by Stripe, which receives your card details directly; we receive only a confirmation, the last four digits, and the card brand so we can show you which card is on file. We do not ask for your Social Security number, your government ID, or the login credentials for your store loyalty accounts. We do not access your contacts, photos, microphone, or health data.</p>
 
     <h2 id="use">3. How we use information</h2>
     <p>We use the information described above to:</p>
@@ -118,8 +118,10 @@
     <h2 id="services">5. Third-party services</h2>
     <p>The Service relies on the following third parties, each of which handles data under its own privacy policy:</p>
     <ul>
-      <li><span class="placeholder">[Hosting and database provider, e.g. Supabase or Firebase]</span> — account storage and app data.</li>
-      <li><span class="placeholder">[Analytics and crash reporting provider]</span> — usage analytics and crash logs.</li>
+      <li>Supabase — account storage, authentication, and app data.</li>
+      <li>Sentry — crash and error reporting.</li>
+      <li>PostHog — product analytics.</li>
+      <li>Stripe — subscription payments. Stripe receives your payment details directly; we never see or store your full card number.</li>
       <li>Microsoft 365 — support and business email.</li>
       <li>Apple and Google — app distribution, sign-in, and push notification delivery.</li>
     </ul>
