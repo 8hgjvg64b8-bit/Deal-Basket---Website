@@ -179,8 +179,12 @@
 (function () {
   "use strict";
   // The API origin. dealbasket.app is static hosting with no server of its own, so this page talks
-  // to the API directly and the API allows exactly this origin (see apps/api/src/main.ts).
-  var API = "https://api.dealbasket.app/v1";
+  // to the API directly, and the API allows exactly this origin through CORS (apps/api/src/main.ts).
+  //
+  // Railway's generated hostname rather than api.dealbasket.app: that subdomain does not exist
+  // yet. When it is set up this becomes a one-line change here — and nothing else, because this
+  // is the only place the website names the API.
+  var API = "https://grocery-appapi-production.up.railway.app/v1";
 
   var form = document.getElementById("checkoutForm");
   var errorEl = document.getElementById("checkoutError");
