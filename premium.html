@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribe — Deal Basket</title>
+<meta name="description" content="Subscribe to Deal Basket Premium or Platinum. Payment is handled by Stripe.">
+
+<meta name="theme-color" content="#1C5B3A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dealbasket.app/pricing.html">
+<meta property="og:title" content="Pricing — Deal Basket">
+<meta property="og:description" content="Subscribe to Deal Basket Premium or Platinum. Payment is handled by Stripe.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Courier+Prime:wght@400;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M4 11h24l-2.6 15.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L4 11Z" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M11 11 15 3M21 11l-4-8" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M11.5 17.5 14.5 21l6.5-7" fill="none" stroke="#FFC53D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Deal Basket
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Support</a>
+      <a class="btn btn-primary" href="index.html#early">Get early access</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <section class="section-tight">
+      <div class="section-head">
+        <p class="eyebrow">Subscribe</p>
+        <h1>Choose a plan.</h1>
+        <p>Paying happens here on the web. Sign in with your Deal Basket account and we will hand you to Stripe to enter card details — we never see your card, and nothing is stored in this browser.</p>
+      </div>
+
+      <form id="checkoutForm" class="checkout" novalidate>
+        <fieldset>
+          <legend>Plan</legend>
+          <label for="tier">Level</label>
+          <select id="tier" name="tier" required>
+            <option value="premium">Premium</option>
+            <option value="platinum">Platinum</option>
+          </select>
+
+          <label for="period">Billing</label>
+          <select id="period" name="period" required>
+            <option value="annual">Yearly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your account</legend>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <p class="fine">Used once to confirm it is you, then discarded. We do not keep you signed in on this site.</p>
+        </fieldset>
+
+        <p id="checkoutError" class="error" role="alert" hidden></p>
+        <button class="btn btn-primary" id="checkoutSubmit" type="submit">Continue to payment</button>
+      </form>
+
+      <p class="fine">Prices and what each level includes are on the <a href="pricing.html">pricing page</a>. Cancelling stops the next renewal and you keep what you have paid for until the end of the term.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:12px">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 11h24l-2.6 15.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L4 11Z" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M11 11 15 3M21 11l-4-8" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M11.5 17.5 14.5 21l6.5-7" fill="none" stroke="#FFC53D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Deal Basket
+        </a>
+        <p class="disclaimer" style="font-size:.9rem;color:var(--muted)">Price your whole grocery list at every store near you.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="index.html#savings">Savings estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Support &amp; contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Deal Basket. All rights reserved.</p>
+      <p class="disclaimer">Deal Basket is independent and not affiliated with, endorsed by, or sponsored by any retailer.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var toggle = document.getElementById("navToggle");
+  var nav = document.getElementById("nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.textContent = open ? "Close" : "Menu";
+    });
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  var PLANS = {
+    premium:  { monthly: "$7.99",  annual: "$79",  monthlyNote: "Billed monthly, cancel any time", annualNote: "$6.58/month, billed annually" },
+    platinum: { monthly: "$14.99", annual: "$149", monthlyNote: "Billed monthly, cancel any time", annualNote: "$12.42/month, billed annually" }
+  };
+
+  var btnM = document.getElementById("btnMonthly");
+  var btnA = document.getElementById("btnAnnual");
+
+  function setPeriod(period) {
+    btnM.setAttribute("aria-pressed", String(period === "monthly"));
+    btnA.setAttribute("aria-pressed", String(period === "annual"));
+
+    Object.keys(PLANS).forEach(function (key) {
+      var p = PLANS[key];
+      var priceEl = document.querySelector('[data-price="' + key + '"]');
+      var perEl = document.querySelector('[data-per="' + key + '"]');
+      var billedEl = document.querySelector('[data-billed="' + key + '"]');
+      if (period === "monthly") {
+        priceEl.textContent = p.monthly;
+        perEl.textContent = "/month";
+        billedEl.textContent = p.monthlyNote;
+      } else {
+        priceEl.textContent = p.annual;
+        perEl.textContent = "/year";
+        billedEl.textContent = p.annualNote;
+      }
+    });
+  }
+
+  btnM.addEventListener("click", function () { setPeriod("monthly"); });
+  btnA.addEventListener("click", function () { setPeriod("annual"); });
+  setPeriod("annual");
+})();
+</script>
+</body>
+
+<script>
+(function () {
+  "use strict";
+  // The API origin. dealbasket.app is static hosting with no server of its own, so this page talks
+  // to the API directly and the API allows exactly this origin (see apps/api/src/main.ts).
+  var API = "https://api.dealbasket.app/v1";
+
+  var form = document.getElementById("checkoutForm");
+  var errorEl = document.getElementById("checkoutError");
+  var submit = document.getElementById("checkoutSubmit");
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    errorEl.hidden = true;
+    submit.disabled = true;
+    submit.textContent = "Starting checkout…";
+
+    var payload = {
+      email: document.getElementById("email").value.trim(),
+      password: document.getElementById("password").value,
+      tier: document.getElementById("tier").value,
+      billing_period: document.getElementById("period").value
+    };
+
+    fetch(API + "/premium/checkout-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+      .then(function (res) {
+        return res.json().then(function (body) { return { ok: res.ok, status: res.status, body: body }; });
+      })
+      .then(function (result) {
+        if (result.ok && result.body && result.body.url) {
+          // Nothing about the sign-in is kept: no token is issued to this page and the password
+          // never leaves this function. The next thing that happens is Stripe.
+          window.location.href = result.body.url;
+          return;
+        }
+        var message = "Something went wrong. Please try again.";
+        if (result.status === 401) message = "That email and password did not match an account.";
+        else if (result.status === 409) message = "You already have an active subscription.";
+        else if (result.status === 429) message = "Too many attempts. Please wait a minute and try again.";
+        else if (result.body && result.body.message) message = result.body.message;
+        errorEl.textContent = message;
+        errorEl.hidden = false;
+      })
+      .catch(function () {
+        errorEl.textContent = "Could not reach Deal Basket. Check your connection and try again.";
+        errorEl.hidden = false;
+      })
+      .finally(function () {
+        submit.disabled = false;
+        submit.textContent = "Continue to payment";
+      });
+  });
+})();
+</script>
+</html>

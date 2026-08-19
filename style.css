@@ -496,3 +496,32 @@ a:hover { color: var(--basil-2); }
   padding-bottom: 12px; margin-bottom: 2px; border-bottom: 1px dashed var(--rule);
 }
 @media (max-width: 900px) { .tiers { grid-template-columns: 1fr; } .tier .tier-for { min-height: 0; } }
+
+/* ---- Subscribe flow (premium.html) ---------------------------------------
+   Added 2026-08-19 with the web checkout. dealbasket.app is the only purchase
+   surface: the app reads entitlement and cannot start a payment. */
+.checkout { max-width: 46ch; margin: 0 0 28px; }
+.checkout fieldset { border: 1px solid var(--line, #E3E0D8); border-radius: 10px; padding: 16px 18px 20px; margin: 0 0 20px; }
+.checkout legend { font-weight: 700; padding: 0 6px; }
+.checkout label { display: block; margin: 12px 0 6px; font-weight: 500; }
+.checkout input,
+.checkout select {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  border: 1px solid var(--line, #E3E0D8);
+  border-radius: 8px;
+  background: #fff;
+}
+.checkout input:focus-visible,
+.checkout select:focus-visible { outline: 3px solid var(--accent, #FFC53D); outline-offset: 1px; }
+.checkout button { width: 100%; margin-top: 4px; }
+.fine { font-size: 14px; opacity: 0.8; max-width: 60ch; }
+.error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #B3261E;
+  color: #B3261E;
+  background: #FDECEA;
+}

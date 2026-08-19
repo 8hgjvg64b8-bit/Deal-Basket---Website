@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subscribed — Deal Basket</title>
+<meta name="description" content="Your Deal Basket subscription is active.">
+
+<meta name="theme-color" content="#1C5B3A">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dealbasket.app/pricing.html">
+<meta property="og:title" content="Pricing — Deal Basket">
+<meta property="og:description" content="Your Deal Basket subscription is active.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Courier+Prime:wght@400;700&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M4 11h24l-2.6 15.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L4 11Z" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linejoin="round"/>
+        <path d="M11 11 15 3M21 11l-4-8" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linecap="round"/>
+        <path d="M11.5 17.5 14.5 21l6.5-7" fill="none" stroke="#FFC53D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Deal Basket
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#features">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Support</a>
+      <a class="btn btn-primary" href="index.html#early">Get early access</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <section class="section-tight">
+      <div class="section-head">
+        <p class="eyebrow">Payment received</p>
+        <h1>You're subscribed.</h1>
+        <p>Stripe has taken your payment and your account is being upgraded now.</p>
+      </div>
+      <div class="callout" style="max-width:70ch">
+        <p><strong>Open the app and sign in again to see your new level.</strong> Signing in is what refreshes what your account is allowed to do — if the app still shows your old level, sign out and back in.</p>
+      </div>
+      <p class="fine">A receipt is on its way from Stripe. Anything unexpected on your bill, email <a href="mailto:support@dealbasket.app">support@dealbasket.app</a>.</p>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="index.html" style="margin-bottom:12px">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M4 11h24l-2.6 15.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L4 11Z" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M11 11 15 3M21 11l-4-8" fill="none" stroke="#1C5B3A" stroke-width="2.4" stroke-linecap="round"/>
+            <path d="M11.5 17.5 14.5 21l6.5-7" fill="none" stroke="#FFC53D" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Deal Basket
+        </a>
+        <p class="disclaimer" style="font-size:.9rem;color:var(--muted)">Price your whole grocery list at every store near you.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="index.html#savings">Savings estimate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="contact.html">Support &amp; contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year">2026</span> Deal Basket. All rights reserved.</p>
+      <p class="disclaimer">Deal Basket is independent and not affiliated with, endorsed by, or sponsored by any retailer.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var toggle = document.getElementById("navToggle");
+  var nav = document.getElementById("nav");
+  if (toggle && nav) {
+    toggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.textContent = open ? "Close" : "Menu";
+    });
+  }
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  var PLANS = {
+    premium:  { monthly: "$7.99",  annual: "$79",  monthlyNote: "Billed monthly, cancel any time", annualNote: "$6.58/month, billed annually" },
+    platinum: { monthly: "$14.99", annual: "$149", monthlyNote: "Billed monthly, cancel any time", annualNote: "$12.42/month, billed annually" }
+  };
+
+  var btnM = document.getElementById("btnMonthly");
+  var btnA = document.getElementById("btnAnnual");
+
+  function setPeriod(period) {
+    btnM.setAttribute("aria-pressed", String(period === "monthly"));
+    btnA.setAttribute("aria-pressed", String(period === "annual"));
+
+    Object.keys(PLANS).forEach(function (key) {
+      var p = PLANS[key];
+      var priceEl = document.querySelector('[data-price="' + key + '"]');
+      var perEl = document.querySelector('[data-per="' + key + '"]');
+      var billedEl = document.querySelector('[data-billed="' + key + '"]');
+      if (period === "monthly") {
+        priceEl.textContent = p.monthly;
+        perEl.textContent = "/month";
+        billedEl.textContent = p.monthlyNote;
+      } else {
+        priceEl.textContent = p.annual;
+        perEl.textContent = "/year";
+        billedEl.textContent = p.annualNote;
+      }
+    });
+  }
+
+  btnM.addEventListener("click", function () { setPeriod("monthly"); });
+  btnA.addEventListener("click", function () { setPeriod("annual"); });
+  setPeriod("annual");
+})();
+</script>
+</body>
+
+</html>
