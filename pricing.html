@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Deal Basket</title>
-<meta name="description" content="Deal Basket is free to compare prices at every store near you. Premium and Platinum add alerts, history, and multi-household support. 14-day free trial.">
+<meta name="description" content="Deal Basket is free to compare prices at every store near you. Premium adds every coupon, waived delivery fees and household sharing; Platinum adds receipt scanning and Plan a Dinner.">
 <link rel="canonical" href="https://dealbasket.app/pricing.html">
 <meta name="theme-color" content="#1C5B3A">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dealbasket.app/pricing.html">
 <meta property="og:title" content="Pricing — Deal Basket">
-<meta property="og:description" content="Free to compare every store. Premium from $79/year. 14-day free trial.">
+<meta property="og:description" content="Free to compare every store. Premium from $79/year, Platinum from $149/year.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +54,14 @@
     <button id="btnAnnual" aria-pressed="true">Annual<span class="save-flag">2 MONTHS FREE</span></button>
   </div>
 
+<!-- BEGIN GENERATED TIERS -->
+<!--
+  GENERATED FILE — DO NOT EDIT BY HAND.
+  Source: packages/pricing/src/capabilities.ts (the capability map) via
+  packages/pricing/scripts/generate.ts. Regenerate with `pnpm --filter @grocery-app/pricing run generate`.
+  Editing this block by hand puts the website back out of step with what the software enforces,
+  which is the entire failure this generation exists to prevent.
+-->
   <div class="tiers">
 
     <div class="tier">
@@ -64,48 +72,49 @@
       <a class="btn btn-ghost" href="index.html#early">Get early access</a>
       <ul>
         <li>Your whole list priced at every store near you</li>
-        <li>Cheapest single-trip recommendation</li>
-        <li>Smart basket — the cheapest split across stores</li>
-        <li>Weekly ads and digital coupons applied automatically</li>
-        <li>Save as many shopping lists as you want</li>
+        <li>The cheapest single-trip recommendation</li>
+        <li>Smart basket — the cheapest split across several stores</li>
+        <li>Every coupon we know about, with its real dollar value</li>
       </ul>
     </div>
 
     <div class="tier featured">
       <span class="flag">Most popular</span>
       <h3>Premium</h3>
-      <p class="tier-for">For the weekly shopper who wants the app watching prices for them.</p>
+      <p class="tier-for">For the weekly shopper who wants every coupon and a waived delivery fee.</p>
       <p class="price"><span data-price="premium">$79</span><span class="per" data-per="premium">/year</span></p>
-      <p class="billed" data-billed="premium">$6.58/month, billed annually</p>
-      <a class="btn btn-primary" href="index.html#early">Start 14-day free trial</a>
+      <p class="billed" data-billed="premium">$6.58/month, billed annually — or $7.99 monthly</p>
+      <a class="btn btn-primary" href="index.html#early">Get early access</a>
       <p class="inherits">Everything in Basic, plus:</p>
       <ul>
-        <li>Price drop alerts on the items you buy most</li>
-        <li>Premium-only coupons and weekly deals</li>
         <li>Edit an order after it is placed, while shopping is under way</li>
-        <li>Monthly savings tracking — what coupons and smart-basket splits saved you</li>
-        <li>Scan a receipt to build next week's list</li>
+        <li>Premium-only coupons and weekly deals</li>
+        <li>Coupon codes and barcodes, so you can actually redeem them</li>
+        <li>Delivery fees waived at checkout</li>
+        <li>Early access to promotions before they open to everyone</li>
+        <li>Share lists and one subscription with your household</li>
       </ul>
     </div>
 
     <div class="tier">
       <h3>Platinum</h3>
-      <p class="tier-for">For multi-household shoppers and small commercial buyers.</p>
+      <p class="tier-for">For households who want the app to do the planning as well as the pricing.</p>
       <p class="price"><span data-price="platinum">$149</span><span class="per" data-per="platinum">/year</span></p>
-      <p class="billed" data-billed="platinum">$12.42/month, billed annually</p>
-      <a class="btn btn-ghost" href="index.html#early">Start 14-day free trial</a>
+      <p class="billed" data-billed="platinum">$12.42/month, billed annually — or $14.99 monthly</p>
+      <a class="btn btn-ghost" href="index.html#early">Get early access</a>
       <p class="inherits">Everything in Premium, plus:</p>
       <ul>
-        <li>Multiple saved delivery addresses</li>
-        <li>Share shopping lists with one household member</li>
-        <li>Priority support</li>
+        <li>Platinum-only coupons and weekly deals</li>
+        <li>Scan a receipt to build next week&#39;s list</li>
+        <li>Plan a Dinner — describe a meal, get the ingredients in your cart</li>
       </ul>
     </div>
 
   </div>
+<!-- END GENERATED TIERS -->
 
   <div class="callout" style="margin-top:44px;max-width:70ch">
-    <p><strong>Every paid plan starts with a 14-day free trial.</strong> No charge during the trial, and you can cancel any time before it ends. If you don't cancel, the plan renews automatically at the price above until you turn it off.</p>
+    <p><strong>Paid plans start when you subscribe and renew automatically at the price above.</strong> You can cancel any time, and cancelling stops the next renewal.</p>
   </div>
 
   <section class="section-tight" style="padding-bottom:0">
@@ -121,7 +130,7 @@
       </details>
       <details>
         <summary>How do I cancel?</summary>
-        <p>Open your account settings in the app or on the website and choose Manage subscription — that opens a secure billing portal where you can cancel in one click. You can also email <a href="mailto:support@dealbasket.app">support@dealbasket.app</a> and we'll do it for you. Cancelling before the trial ends means you're never charged.</p>
+        <p>Open your account settings in the app or on the website and choose Manage subscription — that opens a secure billing portal where you can cancel in one click. You can also email <a href="mailto:support@dealbasket.app">support@dealbasket.app</a> and we'll do it for you.</p>
       </details>
       <details>
         <summary>Can I switch between plans?</summary>
@@ -133,7 +142,7 @@
       </details>
       <details>
         <summary>Do you offer refunds?</summary>
-        <p>Cancel during the 14-day trial and you're never charged, so there's nothing to refund. After that, if something went wrong or you were charged unexpectedly, email <a href="mailto:support@dealbasket.app">support@dealbasket.app</a> within 14 days and we'll sort it out.</p>
+        <p>If something went wrong or you were charged unexpectedly, email <a href="mailto:support@dealbasket.app">support@dealbasket.app</a> within 14 days and we'll sort it out.</p>
       </details>
       <details>
         <summary>Will the price change later?</summary>
