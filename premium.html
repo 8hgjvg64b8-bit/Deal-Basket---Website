@@ -186,6 +186,15 @@
   // is the only place the website names the API.
   var API = "https://grocery-appapi-production.up.railway.app/v1";
 
+  // The pricing page links here as premium.html?tier=platinum, so the plan the shopper actually
+  // clicked is the one selected when they arrive. Ignored if it names anything else — a query
+  // string is user-editable, and the server validates the tier regardless.
+  var requested = new URLSearchParams(window.location.search).get("tier");
+  if (requested === "premium" || requested === "platinum") {
+    var tierField = document.getElementById("tier");
+    if (tierField) tierField.value = requested;
+  }
+
   var form = document.getElementById("checkoutForm");
   var errorEl = document.getElementById("checkoutError");
   var submit = document.getElementById("checkoutSubmit");
