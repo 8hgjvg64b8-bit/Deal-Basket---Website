@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deal Basket — Price your whole grocery list at every store near you</title>
-<meta name="description" content="Deal Basket prices your entire grocery list at every store near you, then shows the cheapest single trip or the cheapest split across stores.">
+<title>Deal Basket — Know what your groceries cost before you go</title>
+<meta name="description" content="Deal Basket matches your grocery list to real products and prices it against shelf prices refreshed every night, so you know the total before you leave the house. Free.">
 <link rel="canonical" href="https://dealbasket.app/">
 <meta name="theme-color" content="#1C5B3A">
 
@@ -12,12 +12,12 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dealbasket.app/">
 <meta property="og:site_name" content="Deal Basket">
-<meta property="og:title" content="Deal Basket — Price your whole grocery list at every store near you">
-<meta property="og:description" content="Same list. Different stores. Sometimes a $5 difference, sometimes a $50 one. Deal Basket does the math before you shop.">
+<meta property="og:title" content="Deal Basket — Know what your groceries cost before you go">
+<meta property="og:description" content="Build your list. See the total. Nothing surprising at the register.">
 <meta property="og:image" content="https://dealbasket.app/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Deal Basket — Price your whole grocery list at every store near you">
-<meta name="twitter:description" content="Same list. Different stores. Deal Basket does the math before you shop.">
+<meta name="twitter:title" content="Deal Basket — Know what your groceries cost before you go">
+<meta name="twitter:description" content="Your grocery list, priced before you shop.">
 <meta name="twitter:image" content="https://dealbasket.app/social-preview.png">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -46,7 +46,6 @@
       <a href="#how">How it works</a>
       <a href="#features">Features</a>
       <a href="pricing.html">Pricing</a>
-      <a href="#savings">Savings</a>
       <a href="contact.html">Support</a>
       <a class="btn btn-primary" href="#early">Get early access</a>
     </nav>
@@ -59,9 +58,9 @@
   <section class="hero wrap">
     <div class="hero-grid">
       <div>
-        <p class="eyebrow">Grocery price comparison</p>
-        <h1>Your list costs <span class="num num-high">$32.52</span> at one store and <span class="num">$27.01</span> across three.</h1>
-        <p class="lede">Deal Basket prices your whole grocery list at every store near you, every week. Then it tells you where to shop — one trip, or a split that's worth the extra stop.</p>
+        <p class="eyebrow">Grocery prices, before you shop</p>
+        <h1>Your list comes to <span class="num">$32.52</span>. You knew that before you left.</h1>
+        <p class="lede">Deal Basket matches every line of your list to a real product and prices it against shelf prices refreshed each night. You see the total while you're still at home — not at the register.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#early">Get early access</a>
           <a class="btn btn-ghost" href="#how">See how it works</a>
@@ -77,15 +76,6 @@
             <span>Weekly basket &middot; 6 items</span>
           </div>
 
-          <div class="store-tabs" role="tablist" aria-label="Price this basket at">
-            <button class="store-tab" role="tab" data-store="0" aria-selected="false">Northside Market</button>
-            <button class="store-tab" role="tab" data-store="1" aria-selected="false">Valu Foods</button>
-            <button class="store-tab" role="tab" data-store="2" aria-selected="false">Green Cart</button>
-            <button class="store-tab" role="tab" data-store="3" aria-selected="true">Smart basket</button>
-          </div>
-
-          <hr class="perf">
-
           <div id="lines" aria-live="polite"></div>
 
           <hr class="perf">
@@ -93,9 +83,14 @@
           <div class="total-line"><span class="label">Items</span><span id="count">6</span></div>
           <div class="total-line grand"><span>Total</span><span class="amount" id="total">$27.01</span></div>
 
+          <!-- "Prices as of 4:12am today" was drafted here and rejected: a hardcoded timestamp in a
+               static page is false the moment it is written, and the receipt's own caption says the
+               prices are illustrative — so stamping a real fetched time onto invented numbers would
+               be worse, not better. "Refreshed nightly" is true of the pipeline, needs no fetch, and
+               claims nothing about these particular figures. -->
           <div class="saved">
-            <span id="savedLabel">Saved vs. priciest cart</span>
-            <strong id="saved">$5.51</strong>
+            <span id="savedLabel">Prices</span>
+            <strong id="saved">Refreshed nightly</strong>
           </div>
 
           <div class="barcode" aria-hidden="true"></div>
@@ -118,17 +113,17 @@
         <div class="step reveal">
           <span class="n">01</span>
           <h3>Build your list</h3>
-          <p>Type it, paste it from your notes app, or scan last week's receipt. Deal Basket matches each line to real products — including the store brands, which is where most of the difference hides.</p>
+          <p>Type it, paste it from your notes app, or add things as you think of them. Deal Basket matches each line to a real product, store brands included.</p>
         </div>
         <div class="step reveal">
           <span class="n">02</span>
-          <h3>We price it everywhere</h3>
-          <p>Every store inside the radius you set gets priced on the same list, with that week's sale prices and digital coupons already applied. No clipping, no per-store apps.</p>
+          <h3>We price it</h3>
+          <p>Every item resolves to an actual shelf price, refreshed each night. You get line-by-line costs and a running total, not an estimate.</p>
         </div>
         <div class="step reveal">
           <span class="n">03</span>
-          <h3>Pick your trade-off</h3>
-          <p>Cheapest single trip, cheapest split across two stores, or fastest delivery window. You see the money and the minutes side by side and decide which one you want this week.</p>
+          <h3>Shop knowing the number</h3>
+          <p>Take the list in with the total already in hand, and check items off as you go.</p>
         </div>
       </div>
     </div>
@@ -144,62 +139,29 @@
 
       <div class="features">
         <div class="feature reveal">
-          <span class="chip">Compare</span>
-          <h3>Every store, one list</h3>
-          <p>Your whole basket priced at each store nearby, not one item at a time. The comparison that matters is the total.</p>
+          <span class="chip">Prices</span>
+          <h3>Real shelf prices, not estimates</h3>
+          <p>Every item is matched to an actual product and its current price, refreshed every night. What you see is what&rsquo;s on the shelf.</p>
         </div>
         <div class="feature reveal">
-          <span class="chip">Optimize</span>
-          <h3>Smart basket</h3>
-          <p>If splitting the list across two stores beats a single trip, Deal Basket says so — and tells you how much the extra stop is worth.</p>
-        </div>
-        <div class="feature reveal">
-          <span class="chip">Deals</span>
-          <h3>Weekly ads, folded in</h3>
-          <p>Sale prices and digital coupons are already applied when you compare. Nothing to clip, nothing to remember at checkout.</p>
-        </div>
-        <div class="feature reveal">
-          <span class="chip">Deliver</span>
-          <h3>Delivery windows</h3>
-          <p>See fees and available slots next to the basket total, so a cheap cart with a $12 delivery fee can't quietly win.</p>
-        </div>
-        <div class="feature reveal">
-          <span class="chip">Track</span>
-          <h3>Savings tracking</h3>
-          <p>Every trip logs what you paid against what the same basket would have cost elsewhere. Real numbers, month over month.</p>
+          <span class="chip">Lists</span>
+          <h3>A list that knows its own total</h3>
+          <p>Build it once and it prices itself. Add, remove, change quantities, and the total moves with you.</p>
         </div>
         <div class="feature reveal">
           <span class="chip">Watch</span>
           <h3>Price drop alerts</h3>
-          <p>Star the things you buy constantly. Get a nudge when coffee or chicken hits its lowest price in eight weeks.</p>
+          <p>Star the things you buy constantly and name the price you&rsquo;d want to pay. We watch the shelf and tell you when it gets there.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="chip">Track</span>
+          <h3>Where the money goes</h3>
+          <p>Every trip rolls up into a monthly view by category and by store: what you actually spent, not what you meant to.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================ CALCULATOR ============================ -->
-  <section class="section rule-top" id="savings">
-    <div class="wrap">
-      <div class="calc reveal">
-        <div>
-          <p class="eyebrow" style="color:rgba(255,255,255,.6)">Savings estimate</p>
-          <h2>What does the spread cost you in a year?</h2>
-          <p>The sample basket above varies 17% between the priciest and cheapest option. Most weeks the gap is smaller. Move the slider to your normal grocery spend.</p>
-        </div>
-        <div>
-          <label for="spend">Your weekly grocery spend</label>
-          <p class="calc-spend" id="spendOut">$150</p>
-          <input type="range" id="spend" min="40" max="400" step="5" value="150"
-                 aria-describedby="calcFine">
-          <div class="calc-out">
-            <div><span>Per week</span><strong id="perWeek">$18</strong></div>
-            <div><span>Per year</span><strong id="perYear">$936</strong></div>
-          </div>
-          <p class="calc-fine" id="calcFine">Estimate only, modeled at 12% — deliberately below the 17% spread in the sample basket. Your actual savings depend on which stores are near you and what you buy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ============================ FAQ ============================ -->
   <section class="section-tight rule-top">
@@ -259,7 +221,7 @@
           </svg>
           Deal Basket
         </a>
-        <p class="disclaimer" style="font-size:.9rem;color:var(--muted)">Price your whole grocery list at every store near you.</p>
+        <p class="disclaimer" style="font-size:.9rem;color:var(--muted)">Know what your groceries cost before you go.</p>
       </div>
       <div>
         <h4>Product</h4>
@@ -267,7 +229,6 @@
           <li><a href="index.html#how">How it works</a></li>
           <li><a href="index.html#features">Features</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="index.html#savings">Savings estimate</a></li>
         </ul>
       </div>
       <div>
@@ -311,90 +272,40 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   /* ---------- Receipt ---------- */
-  var STORES = ["Northside Market", "Valu Foods", "Green Cart"];
-  var CODES = ["NM", "VF", "GC"];
+  /* ---------- Sample receipt ----------
+     Rewritten 2026-08-25 with the rest of the page. This used to hold three invented stores, a
+     per-item cheapest-of-three "smart basket" mode, and a "saved vs. priciest cart" figure — a
+     working demo of a comparison the product cannot make with one retail chain. One list, one set
+     of prices now. The savings calculator that lived below it is gone entirely: every input it had
+     (a 17% spread, a 12% modelled rate) was a cross-store counterfactual, and there is no honest
+     single-chain version of that number. Both come back when a second chain does. */
   var ITEMS = [
-    { name: "Whole milk, 1 gal",     p: [4.29, 3.49, 3.99] },
-    { name: "Eggs, dozen large",     p: [2.99, 4.19, 3.59] },
-    { name: "Chicken breast, 2 lb",  p: [9.98, 7.96, 10.49] },
-    { name: "Bananas, 3 lb",         p: [1.77, 1.47, 1.29] },
-    { name: "Sourdough loaf",        p: [4.50, 5.25, 3.79] },
-    { name: "Coffee, 12 oz",         p: [8.99, 7.49, 9.25] }
+    { name: "Whole milk, 1 gal",    price: 4.29 },
+    { name: "Eggs, dozen large",    price: 2.99 },
+    { name: "Chicken breast, 2 lb", price: 9.98 },
+    { name: "Bananas, 3 lb",        price: 1.77 },
+    { name: "Sourdough loaf",       price: 4.50 },
+    { name: "Coffee, 12 oz",        price: 8.99 }
   ];
 
   var linesEl = document.getElementById("lines");
   var totalEl = document.getElementById("total");
-  var savedEl = document.getElementById("saved");
-  var savedLabelEl = document.getElementById("savedLabel");
-  var tabs = Array.prototype.slice.call(document.querySelectorAll(".store-tab"));
+  var countEl = document.getElementById("count");
 
   function money(n) { return "$" + n.toFixed(2); }
 
-  function storeTotal(i) {
-    return ITEMS.reduce(function (sum, it) { return sum + it.p[i]; }, 0);
-  }
-
-  var worst = Math.max(storeTotal(0), storeTotal(1), storeTotal(2));
-
-  function render(mode) {
+  if (linesEl && totalEl) {
     var html = "";
     var total = 0;
-
     ITEMS.forEach(function (it) {
-      var price, badge = "";
-      if (mode === 3) {
-        var best = 0;
-        for (var i = 1; i < 3; i++) { if (it.p[i] < it.p[best]) best = i; }
-        price = it.p[best];
-        badge = '<span class="from">' + CODES[best] + "</span>";
-      } else {
-        price = it.p[mode];
-      }
-      total += price;
+      total += it.price;
       html += '<div class="line"><span class="item">' + it.name + "</span>" +
-              '<span class="dots"></span>' + badge +
-              '<span class="price">' + money(price) + "</span></div>";
+              '<span class="dots"></span>' +
+              '<span class="price">' + money(it.price) + "</span></div>";
     });
-
     linesEl.innerHTML = html;
     totalEl.textContent = money(total);
-
-    var diff = worst - total;
-    if (diff < 0.005) {
-      savedLabelEl.textContent = "Priciest cart on this list";
-      savedEl.textContent = "—";
-    } else {
-      savedLabelEl.textContent = "Saved vs. priciest cart";
-      savedEl.textContent = money(diff) + "  (" + Math.round((diff / worst) * 100) + "%)";
-    }
-  }
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener("click", function () {
-      tabs.forEach(function (t) { t.setAttribute("aria-selected", "false"); });
-      tab.setAttribute("aria-selected", "true");
-      render(parseInt(tab.dataset.store, 10));
-    });
-  });
-
-  render(3);
-
-  /* ---------- Savings calculator ---------- */
-  var spend = document.getElementById("spend");
-  var spendOut = document.getElementById("spendOut");
-  var perWeek = document.getElementById("perWeek");
-  var perYear = document.getElementById("perYear");
-  var RATE = 0.12;
-
-  function updateCalc() {
-    var v = parseInt(spend.value, 10);
-    spendOut.textContent = "$" + v;
-    perWeek.textContent = "$" + Math.round(v * RATE);
-    perYear.textContent = "$" + Math.round(v * RATE * 52).toLocaleString();
-  }
-  if (spend) {
-    spend.addEventListener("input", updateCalc);
-    updateCalc();
+    if (countEl) countEl.textContent = String(ITEMS.length);
   }
 
   /* ---------- Scroll reveal ---------- */
