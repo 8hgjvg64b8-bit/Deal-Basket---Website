@@ -186,9 +186,15 @@
   // is the only place the website names the API.
   var API = "https://grocery-appapi-production.up.railway.app/v1";
 
-  // The pricing page links here as premium.html?tier=platinum, so the plan the shopper actually
-  // clicked is the one selected when they arrive. Ignored if it names anything else — a query
+  // ?tier=premium / ?tier=platinum preselects a plan. Ignored if it names anything else — a query
   // string is user-editable, and the server validates the tier regardless.
+  //
+  // NOTE (2026-08-25): the pricing page NO LONGER LINKS HERE. Premium and Platinum were taken off
+  // the public page until there is a second retail chain, because the multi-store comparison they
+  // are sold on top of cannot be true with one. This page stays live, works, and is reachable by
+  // direct URL — it is unlinked, not retired, and the checkout it drives is unchanged. So arriving
+  // with no ?tier is now the NORMAL case rather than the odd one, and the form's own default
+  // selection is what carries it.
   var requested = new URLSearchParams(window.location.search).get("tier");
   if (requested === "premium" || requested === "platinum") {
     var tierField = document.getElementById("tier");

@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Deal Basket</title>
-<meta name="description" content="Deal Basket is free to compare prices at every store near you. Premium adds every coupon, waived delivery fees and household sharing; Platinum adds receipt scanning and Plan a Dinner.">
+<meta name="description" content="Deal Basket is free. Real Kroger shelf prices refreshed every night, shopping lists priced before you go, price alerts on the items you watch, and where your grocery money goes each month.">
 <link rel="canonical" href="https://dealbasket.app/pricing.html">
 <meta name="theme-color" content="#1C5B3A">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dealbasket.app/pricing.html">
 <meta property="og:title" content="Pricing — Deal Basket">
-<meta property="og:description" content="Free to compare every store. Premium from $79/year, Platinum from $149/year.">
+<meta property="og:description" content="Free. Real Kroger shelf prices refreshed every night, lists priced before you shop, and price alerts on what you watch.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,13 +45,8 @@
 
   <div class="doc-head" style="border-bottom:0;padding-bottom:0;margin-bottom:32px">
     <p class="eyebrow">Pricing</p>
-    <h1>Comparing prices is free. Forever.</h1>
-    <p class="lede" style="margin-top:16px">The thing Deal Basket is for — pricing your whole list at every store near you and telling you where to shop — costs nothing. Paid plans are for people who want the app working in the background between trips.</p>
-  </div>
-
-  <div class="billing-toggle" role="group" aria-label="Billing period">
-    <button id="btnMonthly" aria-pressed="false">Monthly</button>
-    <button id="btnAnnual" aria-pressed="true">Annual<span class="save-flag">2 MONTHS FREE</span></button>
+    <h1>Deal Basket is free.</h1>
+    <p class="lede" style="margin-top:16px">Everything the app does today costs nothing, and there is no card to enter. We are live in one metro on one chain while we verify pricing data store by store, and we would rather charge for nothing than charge for a comparison we cannot yet make.</p>
   </div>
 
 <!-- BEGIN GENERATED TIERS -->
@@ -61,6 +56,12 @@
   packages/pricing/scripts/generate.ts. Regenerate with `pnpm --filter @grocery-app/pricing run generate`.
   Editing this block by hand puts the website back out of step with what the software enforces,
   which is the entire failure this generation exists to prevent.
+
+  Premium and Platinum are deliberately NOT rendered here as of 2026-08-25. They still exist,
+  are still enforced, and are still purchasable at premium.html — they are withheld from the
+  public page until there is a second retail chain, because the multi-store comparison the
+  paid tiers are sold on top of cannot be true with one. Switch: PUBLISHED_TIERS in
+  packages/pricing/src/plans.ts.
 -->
   <div class="tiers">
 
@@ -71,44 +72,10 @@
       <p class="billed">No card required</p>
       <a class="btn btn-ghost" href="index.html#early">Get early access</a>
       <ul>
-        <li>Your whole list priced at every store near you</li>
-        <li>The cheapest single-trip recommendation</li>
-        <li>Smart basket — the cheapest split across several stores</li>
-        <li>Every coupon we know about, with its real dollar value</li>
+        <li>Real Kroger shelf prices, refreshed every night</li>
+        <li>Build a shopping list and see what it costs before you go</li>
         <li>Price alerts on the items you watch</li>
-        <li>Monthly savings tracking — what coupons and the basket split saved you</li>
-      </ul>
-    </div>
-
-    <div class="tier featured">
-      <span class="flag">Most popular</span>
-      <h3>Premium</h3>
-      <p class="tier-for">For the weekly shopper who wants every coupon and a waived delivery fee.</p>
-      <p class="price"><span data-price="premium">$79</span><span class="per" data-per="premium">/year</span></p>
-      <p class="billed" data-billed="premium">$6.58/month, billed annually — or $7.99 monthly</p>
-      <a class="btn btn-primary" href="premium.html?tier=premium">Subscribe to Premium</a>
-      <p class="inherits">Everything in Basic, plus:</p>
-      <ul>
-        <li>Edit an order after it is placed, while shopping is under way</li>
-        <li>Premium-only coupons and weekly deals</li>
-        <li>Coupon codes and barcodes, so you can actually redeem them</li>
-        <li>Delivery fees waived at checkout</li>
-        <li>Early access to promotions before they open to everyone</li>
-        <li>Share lists and one subscription with your household</li>
-      </ul>
-    </div>
-
-    <div class="tier">
-      <h3>Platinum</h3>
-      <p class="tier-for">For households who want the app to do the planning as well as the pricing.</p>
-      <p class="price"><span data-price="platinum">$149</span><span class="per" data-per="platinum">/year</span></p>
-      <p class="billed" data-billed="platinum">$12.42/month, billed annually — or $14.99 monthly</p>
-      <a class="btn btn-ghost" href="premium.html?tier=platinum">Subscribe to Platinum</a>
-      <p class="inherits">Everything in Premium, plus:</p>
-      <ul>
-        <li>Platinum-only coupons and weekly deals</li>
-        <li>Scan a receipt to build next week&#39;s list</li>
-        <li>Plan a Dinner — describe a meal, get the ingredients in your cart</li>
+        <li>Where your grocery money goes, by category, month by month</li>
       </ul>
     </div>
 
@@ -116,7 +83,7 @@
 <!-- END GENERATED TIERS -->
 
   <div class="callout" style="margin-top:44px;max-width:70ch">
-    <p><strong>Paid plans start when you subscribe and renew automatically at the price above.</strong> You can cancel any time, and cancelling stops the next renewal.</p>
+    <p><strong>These answers are for people who already hold a paid plan.</strong> Paid plans are not on sale here right now, but they still renew automatically at the price you subscribed at, and you can cancel any time — cancelling stops the next renewal.</p>
   </div>
 
   <section class="section-tight" style="padding-bottom:0">
@@ -128,7 +95,7 @@
     <div class="faq">
       <details>
         <summary>Do I have to pay to use Deal Basket?</summary>
-        <p>No. The Basic plan is free permanently and includes the full price comparison across every store we cover, including the smart basket split. Most people never need to upgrade.</p>
+        <p>No. Deal Basket is free, and today that is the whole product: real shelf prices refreshed every night, your list priced before you shop, price alerts on the items you watch, and a monthly view of where your grocery money went.</p>
       </details>
       <details>
         <summary>How do I cancel?</summary>
@@ -207,38 +174,9 @@
   }
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  var PLANS = {
-    premium:  { monthly: "$7.99",  annual: "$79",  monthlyNote: "Billed monthly, cancel any time", annualNote: "$6.58/month, billed annually" },
-    platinum: { monthly: "$14.99", annual: "$149", monthlyNote: "Billed monthly, cancel any time", annualNote: "$12.42/month, billed annually" }
-  };
-
-  var btnM = document.getElementById("btnMonthly");
-  var btnA = document.getElementById("btnAnnual");
-
-  function setPeriod(period) {
-    btnM.setAttribute("aria-pressed", String(period === "monthly"));
-    btnA.setAttribute("aria-pressed", String(period === "annual"));
-
-    Object.keys(PLANS).forEach(function (key) {
-      var p = PLANS[key];
-      var priceEl = document.querySelector('[data-price="' + key + '"]');
-      var perEl = document.querySelector('[data-per="' + key + '"]');
-      var billedEl = document.querySelector('[data-billed="' + key + '"]');
-      if (period === "monthly") {
-        priceEl.textContent = p.monthly;
-        perEl.textContent = "/month";
-        billedEl.textContent = p.monthlyNote;
-      } else {
-        priceEl.textContent = p.annual;
-        perEl.textContent = "/year";
-        billedEl.textContent = p.annualNote;
-      }
-    });
-  }
-
-  btnM.addEventListener("click", function () { setPeriod("monthly"); });
-  btnA.addEventListener("click", function () { setPeriod("annual"); });
-  setPeriod("annual");
+  // The monthly/annual price toggle was removed on 2026-08-25 along with the Premium and
+  // Platinum cards. Its script is gone rather than left inert: setPeriod() ran on load and wrote
+  // to [data-price] elements that no longer exist, so it threw a TypeError on every page view.
 })();
 </script>
 </body>
