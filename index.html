@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Deal Basket — Know what your groceries cost before you go</title>
-<meta name="description" content="Deal Basket matches your grocery list to real products and prices it against shelf prices refreshed every night, so you know the total before you leave the house. Free.">
+<meta name="description" content="Deal Basket is building a grocery app that prices your whole list before you leave the house. We're not live yet — send us your ZIP and we'll tell you when we cover your stores. Free.">
 <link rel="canonical" href="https://dealbasket.app/">
 <meta name="theme-color" content="#1C5B3A">
 
@@ -13,11 +13,11 @@
 <meta property="og:url" content="https://dealbasket.app/">
 <meta property="og:site_name" content="Deal Basket">
 <meta property="og:title" content="Deal Basket — Know what your groceries cost before you go">
-<meta property="og:description" content="Build your list. See the total. Nothing surprising at the register.">
+<meta property="og:description" content="Build your list. See the total before you go. In development — not live yet.">
 <meta property="og:image" content="https://dealbasket.app/social-preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Deal Basket — Know what your groceries cost before you go">
-<meta name="twitter:description" content="Your grocery list, priced before you shop.">
+<meta name="twitter:description" content="Your grocery list, priced before you shop. In development — not live yet.">
 <meta name="twitter:image" content="https://dealbasket.app/social-preview.png">
 
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -59,8 +59,8 @@
     <div class="hero-grid">
       <div>
         <p class="eyebrow">Grocery prices, before you shop</p>
-        <h1>Your list comes to <span class="num">$32.52</span>. You knew that before you left.</h1>
-        <p class="lede">Deal Basket matches every line of your list to a real product and prices it against shelf prices refreshed each night. You see the total while you're still at home — not at the register.</p>
+        <h1>The whole list, priced before you leave the house.</h1>
+        <p class="lede">Deal Basket matches every line of your list to a real product and prices it, so you see the total while you're still at home — not at the register. We're not live yet — get on the list and we'll tell you when we reach your stores.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#early">Get early access</a>
           <a class="btn btn-ghost" href="#how">See how it works</a>
@@ -83,14 +83,12 @@
           <div class="total-line"><span class="label">Items</span><span id="count">6</span></div>
           <div class="total-line grand"><span>Total</span><span class="amount" id="total">$27.01</span></div>
 
-          <!-- "Prices as of 4:12am today" was drafted here and rejected: a hardcoded timestamp in a
-               static page is false the moment it is written, and the receipt's own caption says the
-               prices are illustrative — so stamping a real fetched time onto invented numbers would
-               be worse, not better. "Refreshed nightly" is true of the pipeline, needs no fetch, and
-               claims nothing about these particular figures. -->
+          <!-- This tile states what the receipt's own caption states: these figures are a sample.
+               A freshness or timestamp claim here would be describing invented numbers. Do not add
+               one back without checking there is something behind it. -->
           <div class="saved">
             <span id="savedLabel">Prices</span>
-            <strong id="saved">Refreshed nightly</strong>
+            <strong id="saved">Sample data</strong>
           </div>
 
           <div class="barcode" aria-hidden="true"></div>
@@ -118,7 +116,7 @@
         <div class="step reveal">
           <span class="n">02</span>
           <h3>We price it</h3>
-          <p>Every item resolves to an actual shelf price, refreshed each night. You get line-by-line costs and a running total, not an estimate.</p>
+          <p>Every item resolves to an actual shelf price, not an estimate — line-by-line costs and a running total. This is the part that has to be right before we go live, and it's what we're working on now.</p>
         </div>
         <div class="step reveal">
           <span class="n">03</span>
@@ -141,7 +139,7 @@
         <div class="feature reveal">
           <span class="chip">Prices</span>
           <h3>Real shelf prices, not estimates</h3>
-          <p>Every item is matched to an actual product and its current price, refreshed every night. What you see is what&rsquo;s on the shelf.</p>
+          <p>Every item is matched to an actual product and its current price — what you see is what&rsquo;s on the shelf, not a national average. Not live yet.</p>
         </div>
         <div class="feature reveal">
           <span class="chip">Lists</span>
@@ -174,15 +172,15 @@
       <div class="faq">
         <details>
           <summary>Is Deal Basket free?</summary>
-          <p>Yes — all of it, with no card to enter. Real shelf prices refreshed every night, your list priced before you shop, price alerts on the items you watch, and a monthly view of where your grocery money went. There are no paid plans on sale today; see <a href="pricing.html">pricing</a>.</p>
+          <p>Yes — all of it, with no card to enter. There are no paid plans on sale today; see <a href="pricing.html">pricing</a>. Worth saying plainly: we're not live yet, so the app has no store prices in it right now. Lists, pricing and alerts arrive when we go live.</p>
         </details>
         <details>
           <summary>Which stores are covered?</summary>
-          <p>Right now: one chain, Kroger, in the Longview, Texas area. That is genuinely all — we would rather say so than imply a coverage map we do not have. We add stores as we verify their pricing data, and enter your ZIP when you sign up and we'll tell you what's live near you.</p>
+          <p>None, today. We ran on a single chain in the Longview, Texas area and have paused while we work on wider coverage. We would rather say that than imply a coverage map we do not have. Send us your ZIP and we'll tell you when we cover your stores.</p>
         </details>
         <details>
           <summary>How current are the prices?</summary>
-          <p>Prices refresh every night. We show you the timestamp on every basket so you always know how fresh the number is.</p>
+          <p>There are no prices in the app right now — we're not live yet. When we launch, every basket carries the timestamp of the data behind it, so you always know how fresh the number is.</p>
         </details>
         <details>
           <summary>Do you sell my shopping data?</summary>
@@ -201,7 +199,7 @@
     <div class="wrap">
       <div class="cta-band reveal">
         <h2>Get in before launch.</h2>
-        <p>We're onboarding early testers by region. Send us your ZIP code and we'll tell you when Deal Basket covers your stores — and get you a TestFlight invite when it does.</p>
+        <p>We're building coverage region by region. Send us your ZIP code and we'll tell you when Deal Basket covers your stores — and get you into the beta when it opens.</p>
         <a class="btn btn-light" href="mailto:hello@dealbasket.app?subject=Early%20access&amp;body=My%20ZIP%20code%20is%3A%20">Email us your ZIP</a>
       </div>
     </div>
